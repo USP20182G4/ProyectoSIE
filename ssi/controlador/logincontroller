@@ -1,0 +1,53 @@
+    <?php
+
+    include "model/login.php";
+        $formlogin_message = "";
+
+    if(isset($_POST["usuario"]) || isset($_POST["password"]))
+    {
+        if(trim($_POST["usuario"]) == "" || trim($_POST["password"]) == "")
+        {
+            $formlogin_message = "Debe ingresar los datos de acceso.";
+        }
+        else
+        {
+            $usuariosCon = new login();
+            $usuario = $usuariosCon->iniciarsession($_POST["usuario"],$_POST["password"]);
+
+            if(count($usuario) > 0){
+
+                $_SESSION["id"] = $usuario["id"];
+                $_SESSION["user"] = $usuario["user"];
+                $_SESSION["nombres"] = $usuario["nombres"];
+                $_SESSION["apellidos"] = $usuario["apellidos"];
+                 $_SESSION["rol"] = $usuario["rol"];
+                $_SESSION["estado"] = $usuario["estado"];
+               
+               
+               
+                switch ($_SESSION["rol"]) {
+                                  case "Administrador":
+                                   header('Location: vistas/dashboard.php');
+                                      break;
+                                   case "Gerencial":
+                                  header('Location: vistas/index.php');
+                        
+                                      break;
+                              }              
+               
+            }
+            
+         
+             else{
+             $formlogin_message = "<div class='alert alert-success alert-dismissible ocultar'>
+                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                <p><i class='icon fa fa-check'></i> Login  Incorrecto!</p>
+                </div>";
+
+
+             
+                 
+            }
+        }
+    }
+ ?>
