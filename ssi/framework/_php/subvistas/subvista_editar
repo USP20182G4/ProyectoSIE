@@ -1,0 +1,26 @@
+<?php
+$nombre = $_GET['nombre'];
+$pais = $_GET['pais'];
+$color = $_GET['color'];
+?>
+<fieldset>
+ 	<legend>Editar</legend>
+ 	<div class="col-md-12 col-xs-12">
+ 		<div class="form-group col-md-4 col-xs-4">
+	    	<label>Nombre</label>
+	    	<input type="text" class="form-control" value="<?php echo $nombre;?>">
+	    </div>
+	    <div class="form-group col-md-4 col-xs-4">
+	    	<label>Pais</label>
+	    	<input type="text" class="form-control" value="<?php echo $pais;?>">
+	    </div>
+		<div class="form-group col-md-4 col-xs-4">
+	    	<label>Color</label>
+	    	<input type="text" class="form-control" value="<?php echo $color;?>">
+	    </div>
+	    <hr>&nbsp;
+ 		<button class="btn btn-success">Guardar<span class="glyphicon glyphicon-ok"></span></button>
+ 	</div>
+ 	
+</fieldset>
+
