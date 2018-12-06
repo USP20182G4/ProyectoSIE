@@ -86,17 +86,69 @@
           <li><a href="#" onclick="Cargar('contenedor_principal','listusuario.php')"><i class="fa fa-circle-o"></i> Listar Usuario</a></li>
           </ul>
         </li>
-        <li class="treeview">
+     
+         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Forms</span>
+            <i class="fa fa-laptop"></i>
+            <span>Base de Pacientes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li><a href="#" onclick="Cargar('contenedor_principal','consultacitas.php')"><i class="fa fa-circle-o"></i> Reporte</a></li>
+         
+          </ul>
+        </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Distribucion Medicinas</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#" onclick="Cargar('contenedor_principal','consultasmedicinas.php')"><i class="fa fa-circle-o"></i> Reporte </a></li>
+        
+          </ul>
+        </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Identificando Enfermedades</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#" onclick="Cargar('contenedor_principal','consultasenfermedades.php')"><i class="fa fa-circle-o"></i> Reporte </a></li>
+       
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> 
+			<span>Experiencia Medicos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#" onclick="Cargar('contenedor_principal','consultasatendidas.php')"><i class="fa fa-circle-o"></i> Reporte </a></li>
+        
+          </ul>
+        </li>
+           <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Especialidad Bandera</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#" onclick="Cargar('contenedor_principal','consultaespecialidad.php')"><i class="fa fa-circle-o"></i> Reporte </a></li>
+          
           </ul>
         </li>
       </ul>
@@ -115,38 +167,25 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>Enfermedad</h3>
+              <h3>Enfermedades</h3>
 
-              <p>Consultadas</p>
+              <p>actuales y relevantes</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="#" class="small-box-footer">Mas Informacion <i class="fa fa-arrow-circle-right"></i></a>
+           <a href="#" class="small-box-footer" onclick="Cargar('contenedor_principal','consultasenfermedades.php')"  >Mas Informacion <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>Consultorio</h3>
-
-              <p>Disponibles</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="#" class="small-box-footer">Mas Informacion <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
+    
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>Pacientes</h3>
+              <h3>Experiencia</h3>
 
-              <p> Atendidos</p>
+              <p>Medicos</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -154,19 +193,49 @@
             <a href="#" class="small-box-footer" onclick="Cargar('contenedor_principal','consultasatendidas.php')"  >Mas Informacion <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
+
+           <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-blue">
+            <div class="inner">
+              <h3>Especialidad</h3>
+
+              <p> Bandera</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="#" class="small-box-footer" onclick="Cargar('contenedor_principal','consultaespecialidad.php')"  >Mas Informacion <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>Citas</h3>
+              <h3>Base de</h3>
 
-              <p>Atendidas</p>
+              <p>Pacientes</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="#" class="small-box-footer">Mas Informacion <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer" onclick="Cargar('contenedor_principal','consultacitas.php')"  >Mas Informacion <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+           <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-purple">
+            <div class="inner">
+              <h3>Medicinas</h3>
+
+              <p>Distribucion</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer" onclick="Cargar('contenedor_principal','consultasmedicinas.php')"  >Mas Informacion <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
       <!-- /.box -->
